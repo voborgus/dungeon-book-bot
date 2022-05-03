@@ -10,14 +10,22 @@ custom:
       migrate: true
       noStart: true
 provider:
-  name: aws
-  runtime: nodejs14.x
+  name: yandex-cloud
+  runtime: nodejs14
   stage: dev
-  region: ru-central1-a
+  region: ru-central1
 
 plugins:
   - serverless-offline
-
+  - "@yandex-cloud/serverless-plugin"
+package:
+  patterns:
+    - '!**'
+    - package.json
+    - package-lock.json
+    - api/*.js
+    - logic/*.js
+    - logic/*.json
 functions:
   telegram-handler:
     handler: api/telegram.eventHandler
