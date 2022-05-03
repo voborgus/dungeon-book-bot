@@ -20,7 +20,7 @@ bot.on('text', (ctx) => {
     if (json[scene] != null) {
         return ctx.reply(json[ctx.message.text.toUpperCase()])
     } else {
-        return ctx.reply("Сцена не найдена 🫤. Попробуй другую.")
+        return ctx.reply("Сцена не найдена 😕. Попробуй другую.")
     }
 })
 function transliterate(letter) {
