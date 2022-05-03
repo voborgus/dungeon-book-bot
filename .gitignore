@@ -8,7 +8,7 @@ jspm_packages
 # Token file
 serverless.env.yml
 .env.yml
-
+*.zip
 .idea/
 *.iml
 

@@ -3,7 +3,7 @@ provider "archive" {}
 data "archive_file" "code_archive" {
   type        = "zip"
   source_dir = "../"
-  output_path = "exam-quiz.zip"
+  output_path = "dungeon-book-bot.zip"
   excludes = [
     ".serverless",
     ".git",
@@ -12,8 +12,8 @@ data "archive_file" "code_archive" {
     "serverless.yml",
     ".idea",
     "node_modules",
-    "exam-quiz.iml",
-    "exam-quiz.zip",
+    "dungeon-book-bot.iml",
+    "dungeon-book-bot.zip",
     "terraform",
     ".github",
     "README.md"
