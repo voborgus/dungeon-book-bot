@@ -32,8 +32,6 @@ Deployment can be done using serverless framework and yandex cloud.
   `https://api.telegram.org/bot[TOKEN_HERE]/setWebhook?url=https://[FUNCTION URL]/`
 * Voila, send message to your bot in the telegram
 
-All rights of the book content belongs to [Zvezda](https://zvezda.org.ru/catalog/nastolnye_igry/igry_kvesty/podzemele/)
-
 ## Deployment via Terraform
 
 * Install terraform
@@ -42,3 +40,9 @@ All rights of the book content belongs to [Zvezda](https://zvezda.org.ru/catalog
 * Set the webhook in the bot in the telegram sending the POST request to the url
   `https://api.telegram.org/bot[TOKEN_HERE]/setWebhook?url=https://[FUNCTION URL]/`
 * Voila, send message to your bot in the telegram
+
+# License
+
+The code licensed under MIT license.
+
+All rights of the book content belongs to [Zvezda](https://zvezda.org.ru/catalog/nastolnye_igry/igry_kvesty/podzemele/)
