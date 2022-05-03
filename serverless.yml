@@ -1,0 +1,32 @@
+service: dungeon-book-bot
+frameworkVersion: "3"
+
+custom:
+  config: ${file(.env.yml):${opt:stage, self:provider.stage}}
+  dynamodb:
+    stages:
+      - dev
+    start:
+      migrate: true
+      noStart: true
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: ru-central1-a
+
+plugins:
+  - serverless-offline
+
+functions:
+  telegram-handler:
+    handler: api/telegram.eventHandler
+    memorySize: 128
+    timeout: 5
+    environment:
+      bot_token: ${self:custom.config.bot_token}
+    events:
+      - http:
+          path: webhook
+          method: post
+          cors: true
