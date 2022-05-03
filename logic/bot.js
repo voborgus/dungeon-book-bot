@@ -18,7 +18,7 @@ bot.on('text', (ctx) => {
     console.log(json[scene])
 
     if (json[scene] != null) {
-        return ctx.reply(json[ctx.message.text.toUpperCase()])
+        return ctx.reply(json[scene])
     } else {
         return ctx.reply("Сцена не найдена 😕. Попробуй другую.")
     }
